@@ -16,7 +16,6 @@ public class Main {
 //        System.out.println("Podałeś " + wart);
 //        JOptionPane.showMessageDialog(null, "Podałeś " + val + " i " + wart);
 
-
         String rokUrodzenia = JOptionPane.showInputDialog("w którym roku sie urodziles");
         int roku = Integer.parseInt(rokUrodzenia);
         int lat = 2020 - roku;
