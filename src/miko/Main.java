@@ -15,10 +15,25 @@ public class Main {
 //        System.out.println("Podałeś " + wart);
 //        JOptionPane.showMessageDialog(null, "Podałeś " + val + " i " + wart);
 
+        ileDoKonca();
 //        roku();
 //        int latu = roku();
-        long seku = odPoczątkuNE();
-        JOptionPane.showMessageDialog(null, "minęło " + seku + " sekund od początku naszej ery");
+//        long seku = odPoczątkuNE();
+//        JOptionPane.showMessageDialog(null, "minęło " + seku + " sekund od początku naszej ery");
+    }
+
+    static int ileDoKonca(){
+        int dzien = Integer.parseInt(JOptionPane.showInputDialog("Podaj dzień miesiąca"));
+        int miesiac = Integer.parseInt(JOptionPane.showInputDialog("Podaj miesiąc"));;
+
+        int dni = 0;
+        for (int i = 0; i < miesiac - 1; i++) {
+            dni = dni + dniMies[i];
+        }
+        dni = dni + dzien;
+        dni = 365 - dni;
+        JOptionPane.showMessageDialog(null, "Do końca  roku jest " + dni + " dni");
+        return dni;
     }
 
     static long odPoczątkuNE(){
